@@ -296,7 +296,7 @@ h1 {
     padding: 10px 0;
 }
 
-.about ul {
+.about .skills {
     padding: 20px 0;
 }
 
@@ -457,6 +457,11 @@ footer p {
     }
     /* About Section & Contact */
 
+    .aboutAndContact {
+        display: flex;
+        flex-direction: column;
+    }
+
     .about {
         padding: 20px 0;
     }
@@ -464,6 +469,7 @@ footer p {
     .about .wrapper {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .about h2 {
@@ -480,21 +486,22 @@ footer p {
         padding: 40px;
         width: calc(75% - 40px);
     }
-    .skillBox {
+
+    .about .skillBox {
         width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .skills {
+    .about .skills {
         text-decoration: none;
         list-style-type: none;
         display: flex;
         justify-content: space-between;
         color: #611b49;
-        padding: 40px 0;
-        padding-left: 25%;
+        padding: 20px 40px;
         font-size: 2rem;
-        width: 75%;
-        flex-basis: end;
+        width: calc(75% - 40px);
     }
 
     .skills li {
@@ -502,6 +509,13 @@ footer p {
     }
 
     .contact {
-        padding: 40px;
+        padding: 60px;
+        margin: 0 80px;
+        width: 60%;
+        align-self: flex-end;
+    }
+
+    .contactSubmit {
+        width: 200px;
     }
 }
