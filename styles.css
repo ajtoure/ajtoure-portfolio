@@ -37,6 +37,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -90,6 +94,13 @@ button {
 header {
     height: 100vh;
     width: 100%;
+    scroll-snap-align: start;
+    max-height: 1024px;
+    min-height: 568px;
+}
+
+header .wrapper {
+    padding: 10px 0 20px 0;
 }
 
 h1 {
@@ -104,8 +115,17 @@ h1 {
     font-size: 1.25rem;
 }
 
-header button {
+.startButton {
     font-size: 3rem;
+}
+
+.startButton a i {
+    color: black;
+}
+
+.startButton:hover {
+    transform: rotate(90deg);
+    transition: transform .5s;
 }
 
 .navList {
@@ -127,6 +147,17 @@ header button {
 
 .project {
     padding: 20px 0;
+    height: auto;
+}
+
+.projects {
+    scroll-snap-type: y mandatory;
+    scroll-snap-align: start;
+}
+
+.projectOne, .projectTwo, .projectThree {
+    scroll-snap-align: start;
+
 }
 
 .project h2 {
@@ -139,6 +170,7 @@ header button {
     font-family: "Cormorant Garamond", serif;
     font-size: 1.5rem;
     font-style: italic;
+    padding: 20px 0;
 }
 
 .description, .project img {
@@ -146,8 +178,12 @@ header button {
 }
 
 .description {
-    font-size: .75rem;
+    font-size: .9rem;
     line-height: 24px;
+}
+
+.projectTools {
+    padding: 20px 0;
 }
 
 .projectTools li{
@@ -155,12 +191,36 @@ header button {
     font-weight: 600;
 }
 
-.project button {
+.project .projectButton {
     border: none;
     padding: 10px;
     text-transform: uppercase;
     color: white;
     margin: 20px 0;
+    box-shadow: 2px 2px white;
+}
+
+.project .projectButton:hover {
+    filter: brightness(75%);
+}
+
+.project .projectButton:active {
+    box-shadow: 0 0 #9da2ac;
+    transform: translate(3px, 3px);
+}
+
+.project .buttonBox {
+    padding: 20px 0;
+}
+
+.projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
+    padding: 20px 0;
+    height: auto;
+}
+
+.projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOn {
+    padding: 20px 0;
+    height: auto;
 }
 
 
@@ -171,8 +231,13 @@ header button {
     color: #4d292a;
 }
 
-.projectOne button {
+.projectOne .projectButton {
     background-color: #4d292a;
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    width: 120px;
+    text-align: center;
 }
 
 /*PROJECT TWO*/
@@ -182,8 +247,13 @@ header button {
     color: #611b49;
 }
 
-.projectTwo button {
+.projectTwo .projectButton {
     background-color: #611b49;
+    color: white;
+    padding: 15px;
+    margin: 20px 0;
+    width: 120px;
+    text-align: center;
 }
 
 /*PROJECT THREE*/
@@ -192,8 +262,13 @@ header button {
     color: #3c3b52;
 }
 
-.projectThree button {
+.projectThree .projectButton {
     background-color: #3c3b52;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    width: 120px;
+    text-align: center;
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -202,6 +277,10 @@ header button {
 
 /* ABOUT */
 
+.aboutAndContact {
+    scroll-snap-align: start;
+}
+
 .about {
     color: #611b49;
     padding: 20px;
@@ -209,6 +288,10 @@ header button {
 
 .about h2 {
     font-family: 'Cormorant Garamond', serif;
+}
+
+.aboutText p {
+    padding: 10px 0;
 }
 
 .about ul {
@@ -272,10 +355,16 @@ header button {
     border: none;
     color: #A37F89;
     padding: 20px;
+    box-shadow: 2px 2px #83757b;
 }
 
 .contactSubmit:hover {
     background: #F3EAAF;
+    text-decoration: underline;
+}
+
+.contactSubmit:active {
+    transform: translate(2px, 2px);
 }
 
 
@@ -298,6 +387,10 @@ footer p {
 
 @media (min-width: 768px) {
     /* Header Styles */
+    header {
+        max-height: 1024px;
+        min-height: 568px;
+    }
     header .wrapper{
         height: 100%;
         display: grid;
@@ -326,7 +419,16 @@ footer p {
     /* Main Section - Project Styles */
     .project .wrapper {
         display: flex;
+        justify-content: space-between;
     }
+
+    .projectOne, .projectTwo, .projectThree {
+        height: 100vh;
+        max-height: 1024px;
+        min-height: 568px;
+        width: 100%;
+    }
+
     .projectOneSection, .projectTwoSection, .projectThreeSection {
         width: calc(50% - 20px);
         display: flex;
@@ -336,9 +438,19 @@ footer p {
 
     .projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOne {
         padding-right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
-        padding-left: 20px;
+        padding: 40px 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .projectButton {
+        margin: 0;
     }
     /* About Section & Contact */
 
@@ -373,7 +485,7 @@ footer p {
         grid-row: 2 / 3;
     }
 
-    .about p {
+    .aboutText {
         padding: 40px 0;
         grid-column: 2 / 3;
         grid-row: 2 / 4;
