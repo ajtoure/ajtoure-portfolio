@@ -173,7 +173,7 @@ h1 {
     padding: 20px 0;
 }
 
-.description, .project img {
+.description {
     padding: 20px 0;
 }
 
@@ -240,6 +240,20 @@ h1 {
     text-align: center;
 }
 
+.projectOneImg {
+    border: 1px solid #4d292a;
+    box-shadow: 2px 2px #4d292a;
+    margin: 20px 0;
+}
+
+.projectOneImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 /*PROJECT TWO*/
 
 .projectTwo {
@@ -256,6 +270,20 @@ h1 {
     text-align: center;
 }
 
+.projectTwoImg {
+    border: 2px solid #611b49;
+    box-shadow: 2px 2px #4d292a;
+    margin: 20px 0;
+}
+
+.projectTwoImg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 /*PROJECT THREE*/
 .projectThree {
     background-color: #D6E7F9;
@@ -269,6 +297,10 @@ h1 {
     margin: 10px 0;
     width: 120px;
     text-align: center;
+}
+
+.projectThree img {
+    border: 2px solid #3c3b52;
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -450,6 +482,10 @@ footer p {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .projectOneSectionTwo, .projectTwoSectionTwo {
+        padding: 60px 0 60px 20px;
     }
 
     .projectButton {
