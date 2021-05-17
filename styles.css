@@ -478,18 +478,18 @@ footer p {
         justify-content: space-between;
     }
     .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
-        padding: 40px 0 20px 20px;
+        padding: 60px 0 20px 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    .projectOneSectionTwo, .projectTwoSectionTwo {
-        padding: 60px 0 60px 20px;
-    }
-
     .projectButton {
         margin: 0;
+    }
+
+    .projectTools {
+        padding: 40px 0;
     }
     /* About Section & Contact */
 
