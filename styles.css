@@ -116,7 +116,7 @@ h1 {
 }
 
 .headerQuote {
-    font-family: 'Garamond', serif;
+    font-family: 'Cormorant Garamond', serif;
     padding: 20px 20px 0 0;
     font-size: 1.25rem;
 }
@@ -145,6 +145,10 @@ h1 {
 .navList li a {
     color: black;
     padding: 0 10px;
+}
+
+.navList li a:hover  {
+    border-bottom: 2px solid white;
 }
 
 .scrollLine {
@@ -210,7 +214,7 @@ h1 {
 }
 
 .projectTools {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .projectTools li{
@@ -223,8 +227,7 @@ h1 {
     padding: 10px;
     text-transform: uppercase;
     color: white;
-    margin: 20px 0;
-    box-shadow: 2px 2px white;
+    margin: 20px 0 40px 0;
     text-decoration: none;
     display: flex;
     align-content: center;
@@ -421,6 +424,7 @@ h1 {
         padding: 5px 10px;
         margin-right: 10px;
         margin-bottom: 20px;
+        font-family: "Cormorant Garamond", serif;
 }
 
 .contactForm input:hover,
@@ -518,11 +522,13 @@ footer p {
     .projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOne {
         padding-right: 20px;
         display: flex;
+        flex-shrink: 2;
         flex-direction: column;
     }
     .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
         padding: 60px 0 20px 20px;
         display: flex;
+        flex-shrink: 2;
         flex-direction: column;
     }
 
@@ -531,7 +537,7 @@ footer p {
     }
 
     .projectTools {
-        padding: 40px 0;
+        padding: 20px 0;
     }
     /* About Section & Contact */
 
