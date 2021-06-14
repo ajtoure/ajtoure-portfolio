@@ -255,7 +255,7 @@ h1 {
     flex-shrink: 2;
 }
 
-.projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOn {
+.projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOne {
     padding: 40px 0;
     height: auto;
     max-height: inherit;
@@ -627,12 +627,15 @@ footer p {
 }
 
 @media (min-width: 320px) {
+    html {
+        scroll-snap-type: y proximity;
+    }
     .headerTitleCard {
         display: flex;
         flex-direction: column;
     }
     header h1 {
-        font-size: 4rem;
+        font-size: 4.25rem;
         padding: 20px 0;
     }
     .project .wrapper {
@@ -642,10 +645,12 @@ footer p {
     }
     .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
         width: 100%;
+        padding-top: 0;
     }
     
-    .projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOn {
+    .projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOne {
         width: 100%;
+        padding-bottom: 0;
     }
     .portraitBox {
         width: 50%;
