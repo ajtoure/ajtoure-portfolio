@@ -365,6 +365,12 @@ h1 {
     font-size: 2rem;
     border-bottom: 1px solid #611b49;
 }
+
+.about h4 {
+    margin: 0;
+    padding-top: 20px;
+}
+
 .about.portrait {
     width: 15%;
     height: auto;
@@ -375,12 +381,20 @@ h1 {
     line-height: 30px;
 }
 
-.about .skills {
+.skills {
     padding: 20px 0;
 }
 
-.about ul li {
-    padding-right: 10px;
+.skills li {
+    padding: 0 10px;
+}
+
+.skills li p {
+    font-size: 1rem;
+}
+
+.skills li:hover p {
+    display: block;
 }
 
 /* CONTACT */
@@ -425,6 +439,7 @@ h1 {
         margin-right: 10px;
         margin-bottom: 20px;
         font-family: "Cormorant Garamond", serif;
+        font-style: italic;
 }
 
 .contactForm input:hover,
@@ -567,7 +582,7 @@ footer p {
     }
 
     .aboutText {
-        padding: 40px;
+        padding: 20px 40px;
         width: calc(75% - 40px);
     }
 
@@ -581,15 +596,11 @@ footer p {
         text-decoration: none;
         list-style-type: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         color: #611b49;
         padding: 20px 40px;
-        font-size: 2rem;
+        font-size: 2.5rem;
         width: calc(75% - 40px);
-    }
-
-    .skills li {
-        padding: 20px;
     }
 
     .contact {
