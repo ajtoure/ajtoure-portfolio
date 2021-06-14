@@ -28,13 +28,12 @@ $grey: #696880;
 
 /*General Styles (Fonts, heading, paragraphs) */
 
-
 body {
     background-color: #F6EFEE;
 }
 
 * {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -48,9 +47,14 @@ html {
 }
 
 h1, h2, h3 {
-    font-weight: 600;
     margin: 0;
     padding: 10px 0;
+}
+
+h2, 
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
 }
 
 ul, p, img {
@@ -108,6 +112,7 @@ h1 {
     -webkit-text-fill-color: #F6EFEE;
     font-size: 6rem;
     font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
 
 .headerQuote {
@@ -142,6 +147,23 @@ h1 {
     padding: 0 10px;
 }
 
+.scrollLine {
+    position: fixed;
+    height: 5px;
+    margin-bottom: -2px;
+    background-color: magenta;
+    width: 0%;
+    z-index: 1;
+}
+
+.scrollContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: #696880;
+    width: 100%;
+}
 
 /*-----------------------------------------------------------------------------*/
 /* MAIN SECTION STYLES - PROJECT SECTIONS HERE*/
@@ -157,34 +179,38 @@ h1 {
     scroll-snap-align: start;
 }
 
+.project .wrapper {
+    display: flex;
+}
+
 .projectOne, .projectTwo, .projectThree {
     scroll-snap-align: start;
 
 }
 
 .project h2 {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
     margin: 10px 0;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    text-transform: capitalize;
 }
 
 .project .subtitle {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-style: italic;
-    padding: 20px 0;
+    padding: 0 0 20px 0;
 }
 
 .description {
     padding: 20px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    margin: 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
     line-height: 40px;
 }
 
 .projectTools {
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .projectTools li{
@@ -206,6 +232,7 @@ h1 {
 
 .project .projectButton:hover {
     filter: brightness(75%);
+    text-decoration: underline;
 }
 
 .project .projectButton:active {
@@ -213,18 +240,28 @@ h1 {
     transform: translate(4px, 4px);
 }
 
-.project .buttonBox {
-    padding: 20px 0;
-}
-
 .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
-    padding: 20px 0;
+    padding: 40px 0 80px 0;
     height: auto;
+    max-height: inherit;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-shrink: 2;
 }
 
 .projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOn {
-    padding: 20px 0;
+    padding: 40px 0;
     height: auto;
+    max-height: inherit;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+    flex-shrink: 2;
 }
 
 
@@ -261,7 +298,6 @@ h1 {
 /*PROJECT TWO*/
 
 .projectTwo {
-    background-color: #F3EAAF;
     color: #611b49;
 }
 
@@ -323,13 +359,17 @@ h1 {
 }
 
 .about h2 {
-    font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
     border-bottom: 1px solid #611b49;
+}
+.about.portrait {
+    width: 15%;
+    height: auto;
 }
 
 .aboutText p {
     padding: 10px 0;
+    line-height: 30px;
 }
 
 .about .skills {
@@ -479,13 +519,11 @@ footer p {
         padding-right: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
     .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
         padding: 60px 0 20px 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 
     .projectButton {
@@ -559,3 +597,5 @@ footer p {
         width: 200px;
     }
 }
+
+@media(min-width: 4)

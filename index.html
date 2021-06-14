@@ -19,10 +19,13 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=EB+Garamond&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> 
     <script
       src="https://kit.fontawesome.com/eebb423b1e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./jquery-3.6.0.min.js"></script>
     <title>AJ Toure Portfolio</title>
   </head>
   <body>
@@ -55,14 +58,19 @@
 
     <!-- Main Section with Projects -->
     <main class="projects" id="projects">
+      <!--<div class="scrollContainer">
+        <div class="scrolLine"></div>
       <!-- Project One - Airhead Meditation App -->
       <section class="project projectOne">
         <div class="wrapper">
           <div class="projectOneSection projectOneSectionOne">
-            <h2>airhead</h2>
-            <p class="subtitle">
+            <div class="titleContainer">
+              <h2>airhead.</h2>
+              <p class="subtitle">
               a meditation app that simulates deep breathing
-            </p>
+              </p>
+            </div>
+            
             <p class="description">
               We set out to make an app that assists the user with their
               meditation practice. The user selects a time and an animation is
@@ -81,14 +89,11 @@
               <li>React</li>
               <li>Firebase</li>
             </ul>
-            <div class="buttonBox">
               <a
               class="projectButton"
               target="_BLANK"
               href="https://airhead-meditation.netlify.app/"
-              >see it live</a
-            >
-            </div>
+              >see it live</a>
           </div>
         </div>
       </section>
@@ -97,10 +102,12 @@
       <section class="project projectTwo">
         <div class="wrapper">
           <div class="projectTwoSection projectTwoSectionOne">
-            <h2>What Do You No</h2>
-            <p class="subtitle">
+            <div class="titleContainer">
+              <h2>what do you no.</h2>
+              <p class="subtitle">
               an educational game app that tracks the top score
-            </p>
+              </p>
+            </div>
             <div class="projectTwoImg">
               <img src="./assets/whatDoYouNo_app_lightweight.gif" alt="the application consists of sliding title cards that flash different colors according to whether the answer is right or wrong" />
             </div>
@@ -123,15 +130,12 @@
               <li>Ajax</li>
               <li>RESTful API</li>
             </ul>
-            <div class="buttonBox">
               <a
               class="projectButton"
               target="_BLANK"
               href="https://adoring-nobel-62bcfd.netlify.app"
               >see it live
-              </a>
-            </div>
-            
+              </a>          
           </div>
         </div>
       </section>
@@ -140,8 +144,10 @@
       <section class="project projectThree">
         <div class="wrapper">
           <div class="projectThreeSection projectThreeSectionOne">
-            <h2>Poll it Together</h2>
-            <p class="subtitle">a DIY poll maker - it tracks answers and saves your poll for you</p>
+            <div class="titleContainer">
+              <h2>poll it together.</h2>
+              <p class="subtitle">a DIY poll maker - it tracks answers and saves your poll for you</p>
+            </div>
             <p class="description">
               An agency app we were tasked with required us to make a polling application. The user can use the poll to make an inquiry and share the link anywhere. Our firebase database keeps track of the poll and allows the user to view the statistics of the data collected.
             </p>
@@ -161,8 +167,7 @@
               class="projectButton"
               target="_BLANK"
               href="https://polltogether.github.io/poll-it/"
-              >see it live</a
-            >
+              >see it live</a>
             </div>
           </div>
         </div>
@@ -276,5 +281,6 @@
     <footer>
       <p>copyright &copy aj toure 2021</p>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
