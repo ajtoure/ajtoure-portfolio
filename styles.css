@@ -626,6 +626,30 @@ footer p {
     }
 }
 
-@media(min-width: 320px){
-
+@media (min-width: 320px) {
+    .headerTitleCard {
+        display: flex;
+        flex-direction: column;
+    }
+    header h1 {
+        font-size: 4rem;
+        padding: 20px 0;
+    }
+    .project .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
+        width: 100%;
+    }
+    
+    .projectOneSectionOne, .projectTwoSectionOne, .projectThreeSectionOn {
+        width: 100%;
+    }
+    .portraitBox {
+        width: 50%;
+        height: auto;
+        padding: 20px 0;
+    }
 }
