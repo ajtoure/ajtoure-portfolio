@@ -117,6 +117,7 @@ h1 {
 
 .headerQuote {
     font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
     padding: 20px 20px 0 0;
     font-size: 1.25rem;
 }
@@ -200,6 +201,7 @@ h1 {
 
 .project .subtitle {
     font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
     font-size: 1.2rem;
     font-style: italic;
     padding: 0 0 20px 0;
@@ -416,6 +418,18 @@ h1 {
     width: calc(100% - 20px);
 }
 
+.contactButtonContainer {
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.openContact,
+.closeContact {
+    color: #611b49;
+}
+
 .contact ul li {
     padding-right: 10px;
 }
@@ -447,6 +461,7 @@ h1 {
         margin-right: 10px;
         margin-bottom: 20px;
         font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
         font-style: italic;
 }
 
@@ -548,13 +563,14 @@ footer p {
         padding-right: 20px;
         display: flex;
         flex-shrink: 2;
-        flex-direction: column;
+        width: calc(50% - 20px);
     }
     .projectOneSectionTwo, .projectTwoSectionTwo, .projectThreeSectionTwo {
         padding: 60px 0 20px 20px;
         display: flex;
         flex-shrink: 2;
         flex-direction: column;
+        width: calc(50% - 20px);
     }
 
     .projectButton {
@@ -626,7 +642,7 @@ footer p {
     }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 768px) {
     html {
         scroll-snap-type: y proximity;
     }
@@ -638,6 +654,9 @@ footer p {
         font-size: 4.25rem;
         padding: 20px 0;
     }
+    .projectOne .wrapper,
+    .projectTwo .wrapper,
+    .projectThree .wrapper,
     .project .wrapper {
         display: flex;
         flex-wrap: wrap;
