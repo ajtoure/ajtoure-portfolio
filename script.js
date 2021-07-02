@@ -1,4 +1,5 @@
-const portfolioApp = {};
+const app = {};
+
 //The menu, contact form and scroll will be animated
 
 //scroll animation/effect for each section
@@ -12,7 +13,7 @@ const portfolioApp = {};
 //this will toggle the contact form open and closed
 //the two classes will be toggled when the arrow is clicked
 
-portfolioApp.init = function(){
+/*portfolioApp.init = function(){
    $(window).scroll(function(){
       const winTop = $(window).scrollTop(), 
       docHeight = $(document).height(), 
@@ -20,6 +21,37 @@ portfolioApp.init = function(){
       const scrolled = (winTop/(docHeight - winHeight))*100;
       $('.scrollLine').css('width', (scrolled + '%'));
    });
-};
+};*/
 
-portfolioApp.init();
+// classList - shows/gets all classes
+// contains - check classList for specific class
+// add - add class
+// remove - remove class
+// toggle - toggles class
+
+//navigation functionality
+
+app.navBtn = document.querySelector('.navToggle');
+app.navLinks = document.querySelector('.navList');
+
+app.openNav = () => {
+   app.navBtn.addEventListener('click', function(){
+      setTimeout(function(){
+         if(app.navLinks.classList.contains('navListHidden')){
+            app.navLinks.classList.remove('navListHidden');
+            app.navBtn.style.transform = 'rotate(90deg)';
+         } else {
+            app.navLinks.classList.add('navListHidden');
+            app.navBtn.style.transform = 'rotate(0deg)';
+         }
+      }, 200);
+   });
+}
+
+//calling the functions
+app.init = () => {
+   app.openNav();
+}
+
+//initializing the app
+app.init();

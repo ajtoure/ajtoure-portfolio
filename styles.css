@@ -652,8 +652,57 @@ footer p {
     }
     header h1 {
         font-size: 4.25rem;
+        padding: 80px 0;
+    }
+    nav {
+        display: flex;
+        justify-content: end;
+        background-color: #F6EFEE;
+        position: relative;
+    }
+    .navToggle {
+        transition: 0.3s ease-in-out;
+        display: block;
+    }
+    .navToggle .fas {
+        font-size: 2.5rem;
+    }
+
+    .navList li a {
+        font-size: 2rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+    }
+
+    .navList li {
+        width: 100%;
         padding: 20px 0;
     }
+
+    .navList {
+        width: 100%;
+        margin-top: 100px;
+        background-color: inherit;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        overflow-y: hidden;
+        max-height: 38vh;
+        -moz-transition: max-height 4s ease-in-out;
+        -webkit-transition: max-height 4s ease-in-out;
+        -o-transition: max-height 4s ease-in-out;
+        transition: max-height 4s ease-in-out;
+    }
+
+    .navListHidden {
+        max-height: 0;
+        display: none;
+    }
+
+    .fa-star-of-life {
+        padding: 40px 0;
+    }
+
     .projectOne .wrapper,
     .projectTwo .wrapper,
     .projectThree .wrapper,
