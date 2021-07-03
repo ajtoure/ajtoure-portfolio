@@ -687,7 +687,7 @@ footer p {
         justify-content: space-evenly;
         position: absolute;
         overflow-y: hidden;
-        max-height: 38vh;
+        max-height: 600px;
         -moz-transition: max-height 4s ease-in-out;
         -webkit-transition: max-height 4s ease-in-out;
         -o-transition: max-height 4s ease-in-out;
@@ -696,6 +696,7 @@ footer p {
 
     .navListHidden {
         max-height: 0;
+        height: 0;
         display: none;
     }
 
