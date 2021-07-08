@@ -34,23 +34,18 @@ const app = {};
 app.navBtn = document.querySelector('.navToggle');
 app.navLinks = document.querySelector('.navList');
 
-app.openNav = () => {
-   app.navBtn.addEventListener('click', function(){
-      setTimeout(function(){
-         if(app.navLinks.classList.contains('navListHidden')){
-            app.navLinks.classList.remove('navListHidden');
-            app.navBtn.style.transform = 'rotate(90deg)';
-         } else {
-            app.navLinks.classList.add('navListHidden');
-            app.navBtn.style.transform = 'rotate(0deg)';
-         }
-      }, 200);
-   });
-}
 
 //calling the functions
 app.init = () => {
-   app.openNav();
+   app.navBtn.addEventListener('click', function(){
+      if(app.navLinks.classList.contains('navListHidden')){
+         app.navLinks.classList.remove('navListHidden');
+         app.navBtn.style.transform = 'rotate(90deg)';
+      } else {
+         app.navLinks.classList.add('navListHidden');
+         app.navBtn.style.transform = 'rotate(0deg)';
+      }
+   });
 }
 
 //initializing the app

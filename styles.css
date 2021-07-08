@@ -687,17 +687,19 @@ footer p {
         justify-content: space-evenly;
         position: absolute;
         overflow-y: hidden;
-        max-height: 600px;
-        -moz-transition: max-height 4s ease-in-out;
-        -webkit-transition: max-height 4s ease-in-out;
-        -o-transition: max-height 4s ease-in-out;
-        transition: max-height 4s ease-in-out;
+        height: 350px;
+        visibility: visible;
+        opacity: 1;
+        -moz-transition: all .25s ease-in;
+        -webkit-transition: all .25s ease-in;
+        -o-transition: all .25s ease-in;
+        transition: all .25s ease-in;
     }
 
     .navListHidden {
-        max-height: 0;
         height: 0;
-        display: none;
+        opacity: 0;
+        visibility: hidden;
     }
 
     .fa-star-of-life {
