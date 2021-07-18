@@ -376,6 +376,7 @@ h1 {
 
 .portraitBox {
     width: 20%;
+    padding: 20px;
     height: auto;
     flex-shrink: 2;
 }
@@ -699,6 +700,7 @@ footer p {
     .navListHidden {
         height: 0;
         opacity: 0;
+        overflow: hidden;
         visibility: hidden;
     }
 
